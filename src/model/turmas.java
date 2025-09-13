@@ -1,55 +1,75 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
-/**
- *
- * @author liliano
- */
 public class turmas {
+    private String codigoTurma;
+    private String disciplina;
+    private Professor professor;
+    private List<Aluno> alunos;
     private String curso;
-    private Object turmas = new Object();
-    private ArrayList<turmas> lista = new ArrayList<>();
+    private String horario;
 
-    public turmas(String curso) {
+    public turmas(String codigoTurma, String disciplina, Professor professor, String curso, String horario) {
+        this.codigoTurma = codigoTurma;
+        this.disciplina = disciplina;
+        this.professor = professor;
         this.curso = curso;
-    }
-    
-
-    public String getCurso() {
-        return curso;
+        this.horario = horario;
+        this.alunos = new ArrayList<>();
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
+    public String getCodigoTurma() { 
+        return codigoTurma; 
+    }
+    public void setCodigoTurma(String codigoTurma) { 
+        this.codigoTurma = codigoTurma; 
     }
 
-    public Object getTurmas() {
-        return turmas;
+    public String getDisciplina() { 
+        return disciplina; 
+    }
+    public void setDisciplina(String disciplina) { 
+        this.disciplina = disciplina; 
     }
 
-    public void setTurmas(Object turmas) {
-        this.turmas = turmas;
+    public Professor getProfessor() { 
+        return professor; 
+    }
+    public void setProfessor(Professor professor) { 
+        this.professor = professor; 
     }
 
-    public ArrayList<turmas> getLista() {
-        return lista;
+    public List<Aluno> getAlunos() { 
+        return alunos; 
+    }
+    public void setAlunos(List<Aluno> alunos) { 
+        this.alunos = alunos; 
     }
 
-    public void setLista(ArrayList<turmas> lista) {
-        this.lista = lista;
+    public void adicionarAluno(Aluno aluno) { 
+        this.alunos.add(aluno); 
     }
-    
-    
-    
-    
+    public void removerAluno(Aluno aluno) { 
+        this.alunos.remove(aluno); 
+    }
+
+    public String getCurso() { 
+        return curso; 
+    }
+    public void setCurso(String curso) { 
+        this.curso = curso; 
+    }
+
+    public String getHorario() { 
+        return horario; 
+    }
+    public void setHorario(String horario) { 
+        this.horario = horario; 
+    }
 
     public turmas() {
+        this.alunos = new ArrayList<>();
     }
-    
-    
 }

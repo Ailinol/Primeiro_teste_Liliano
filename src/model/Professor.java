@@ -22,6 +22,11 @@ public class Professor extends Pessoa{
         this.regime = regime;
     }
 
+    public Professor() {
+    }
+    
+    
+
     public String getDisciplina() {
         return disciplina;
     }

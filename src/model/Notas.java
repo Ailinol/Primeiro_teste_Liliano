@@ -1,47 +1,55 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author liliano
- */
-public class Notas extends Aluno {
-    private double not1;
+public class Notas {
+    private double nota1;
     private double nota2;
     private String disciplina;
+    private Aluno aluno;
+    private turmas turma;
 
-    public Notas(int matricula, String curso, int anoIngresso, String tipoAluno, double mensalidade, String nome, String bi, int idade, String genero, String email) {
-        super(matricula, curso, anoIngresso, tipoAluno, mensalidade, nome, bi, idade, genero, email);
-    }
-
-    public double getNot1() {
-        return not1;
-    }
-
-    public void setNot1(double not1) {
-        this.not1 = not1;
-    }
-
-    public double getNota2() {
-        return nota2;
-    }
-
-    public void setNota2(double nota2) {
+    public Notas(double nota1, double nota2, String disciplina, Aluno aluno, turmas turma) {
+        this.nota1 = nota1;
         this.nota2 = nota2;
-    }
-
-    public String getExame() {
-        return disciplina;
-    }
-
-    public void setExame(String disciplina) {
         this.disciplina = disciplina;
+        this.aluno = aluno;
+        this.turma = turma;
     }
 
-   
-    
-    
+    public double getNota1() { 
+        return nota1; 
+    }
+    public void setNota1(double nota1) { 
+        this.nota1 = nota1; 
+    }
+
+    public double getNota2() { 
+        return nota2; 
+    }
+    public void setNota2(double nota2) { 
+        this.nota2 = nota2; 
+    }
+
+    public String getDisciplina() { 
+        return disciplina; 
+    }
+    public void setDisciplina(String disciplina) { 
+        this.disciplina = disciplina; 
+    }
+
+    public Aluno getAluno() { 
+        return aluno; 
+    }
+    public void setAluno(Aluno aluno) { 
+        this.aluno = aluno; 
+    }
+
+    public turmas getTurma() { 
+        return turma; 
+    }
+    public void setTurma(turmas turma) { 
+        this.turma = turma; 
+    }
+
+    public Notas() {
+    }
 }
