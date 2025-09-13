@@ -321,7 +321,7 @@ public class Turmas extends javax.swing.JFrame {
             turma.getCurso(),
             turma.getProfessor() != null ? turma.getProfessor().getNome() : "N/A",
             turma.getHorario(),
-            turma.getAlunos().size()
+            //turma.getAlunos().size()
         });
     }
 }
